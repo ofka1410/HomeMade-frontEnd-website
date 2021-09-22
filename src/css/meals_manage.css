@@ -1,0 +1,84 @@
+.list-warper{
+    margin: auto;  
+}
+.bt-available{
+    color:white;
+    background-color: rgb(224, 153, 20); 
+    height: 30px;
+    font-weight: 600;
+    border-radius: 10px;
+    margin-right: 5px;
+ 
+}
+.bt-warper{
+   margin: auto;
+    margin-top: 40px;
+}
+.header-warper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex_avatar_name{
+    display: flex;
+}
+
+.warper-meals{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+   justify-content:center;
+   align-items: center;
+  
+
+}
+.row{
+    display: flex;
+   justify-content: center;
+   align-items: center;
+    height: 8vh;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid gray;
+    text-align: right;
+    margin:auto; 
+    width:100%;
+}
+.item_cover{
+  text-align: center;
+   width:120px;
+   padding-top:10px;
+   margin:auto;
+}
+.avatar{
+width: 60px !important;
+height: 60px !important;
+}
+.bt_avialable{
+    width: 120px;
+}
+.search{
+    width: 230px;
+    height: 25px;
+    
+}
+.search_warper{
+    padding: 10px;
+}
+
+@media only screen and (max-width: 600px){
+.item_cover{
+margin-bottom: 20px;
+margin-top:30px;
+}
+.row{
+    margin-top: 10px;
+}
+.list-warper{
+    margin-top:70px;
+}
+}
+
+    

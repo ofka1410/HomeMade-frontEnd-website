@@ -1,23 +1,42 @@
-import logo from './logo.svg';
+import React,{useState,useEffect} from 'react'
 import './App.css';
+import Main from  './components/Main'
+import Login from './login/Login';
 
 function App() {
+  const[token,setToken]=useState()
+  const[tokenID,setTokenID]=useState()
+  //ZVIkBOEvbarGHH1jG7dx  ליאורה
+
+// lmFHlQjOe6DI5IQknmib אהוד
+//RUeo5KXnIWKOyZtstrZ4 מירי
+
+
+useEffect(() => {
+  const obj = JSON.parse(localStorage.getItem('cookies'))
+  console.log(obj)
+  if(obj){
+    setToken(obj.id)
+    setTokenID(obj.token)
+  }
+}, [])
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {token && tokenID?
+      <Main
+      setToken={setToken}
+     token={token}
+     setTokenID={setTokenID}
+     tokenID={tokenID}
+     /> 
+    :<Login
+    setToken={setToken}
+    token={token}
+    setTokenID={setTokenID}
+    tokenID={tokenID}
+    />}
     </div>
   );
 }

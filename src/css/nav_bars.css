@@ -1,0 +1,157 @@
+
+@media only screen and (min-width: 750px) {
+.nav{
+    width:100%;
+    height:60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   color:white;
+   background-color: rgb(39, 39, 42);
+   border-bottom: 0.5px solid rgb(228, 199, 199);
+}
+}
+
+
+.notifaication:hover{
+    transition:color 0.3s;
+color: rgb(255, 217, 0);
+transform:scale(1.2)
+}
+.nav_link:hover{
+    transition:color 0.2s;
+color: rgb(243, 220, 87);
+transform:scale(1.2);
+
+}
+
+   
+
+.icons-header-warper{
+    display: flex;
+    flex-direction: row;
+}
+.warper{
+        display: flex;
+        flex-direction: row;
+        margin-right: 40px; 
+}
+.icons_profile_warper{
+    display: flex;
+    flex-direction: row;
+    margin-right: 40px; 
+}
+
+.side_nav_warper{
+    padding-top: 10px;
+    height: 100vh;
+    max-width: 320px;
+    background-color:rgb(231, 1, 1);
+   
+}
+.logo_warper{
+    width: 100%;
+    position: absolute;
+    bottom:0;
+
+}
+.side_nav_warper{
+    color: white;
+ 
+}
+
+.nav_link{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.link_warper{
+    align-items: right;
+    padding: 15px;
+    border-bottom: 1px solid  white;
+}
+.footer{
+    height: 40px;
+    background-color:rgb(39, 39, 42) ;
+   margin-top: 10px;
+    padding-top: 10px;
+}
+
+@media only screen and (max-width: 750px) {
+    .icons_profile_warper{
+       margin-right: none !important;
+      
+    }
+    #name_profile_avatar{
+        width:120px;
+    }
+    .nav{
+        justify-content: center;
+        position: fixed;
+        top:0;
+        z-index: 1000;
+        margin-bottom: 10px;
+    }
+}
+
+.navbar__link--active{
+  color: rgb(245, 233, 233);
+  font-weight: bold;
+  padding-bottom: 8px;
+  font-size: 20px;
+  border-bottom:3px solid rgb(23, 204, 68);
+}
+
+@media only screen and (max-width: 400px) {
+   
+   .nav{
+    background-color: rgb(39, 39, 42);
+     width:100%;
+    align-items: center;
+  
+   }
+}
+@media only screen and (max-width: 900px) {
+    
+    .nav{
+        color:white;
+        width:100%;
+        background-color: rgb(39, 39, 42);
+    }
+ }
+
+ @media only screen and (max-width: 750px) {
+    
+   
+    .warper{
+     padding-left: 170px;
+    }
+    .menu-bt{
+        position: relative;
+        top:50%;
+        right:130px;
+        margin-left: 70px !important;
+    }
+ }
+ 
+ @media only screen and (max-width: 450px) {
+ 
+    .logo_warper{
+        width: 100%;
+        height: 100px !important;
+        position: absolute;
+        bottom:0;
+    
+    }
+    .nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: none;
+    }
+    .name{
+        flex-direction: column;
+    }
+ }

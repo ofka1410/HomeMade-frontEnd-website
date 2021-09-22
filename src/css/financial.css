@@ -1,0 +1,66 @@
+.first_line_finance{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+ 
+    margin-bottom: 30px;
+    background-color: rgb(221, 235, 243);
+}
+
+.first_chart{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.amount_money{
+    color: rgb(28, 110, 28);
+ 
+    padding-right: 10px;
+}
+.buttons{
+    color:white !important;
+    background-color: rgb(224, 153, 20) !important; 
+    width: 150px !important;
+    border-radius: 10px !important;
+    margin: 10px !important;
+    font-weight: 600 !important;
+    max-height:40px;
+}
+.select_month{
+    width:150px;
+    height: 30px;
+    border-radius: 10px;
+   font-size: 16px;
+   
+}
+.cash-pull-field{
+    width: 100%;
+    margin: 10px;
+}
+.small_chart{
+    width:200px;
+    
+}
+.small-chart-warper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media only screen and (max-width: 500px) {
+    .small_chart{
+        width:150px;
+    } 
+    .profit-warper{
+       width: 140px;
+    }
+    
+}
+@media only screen and (max-width: 700px) {
+    .small_chart{
+        width:150px;
+    } 
+    .container{
+        margin-top: 70px;
+    }
+}

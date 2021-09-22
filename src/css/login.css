@@ -1,0 +1,73 @@
+.login-container{
+    height: 100vh;
+    background-image:linear-gradient(to bottom, rgba(241, 128, 128, 0.52), rgba(165, 122, 122, 0.73)), url('../Homemade.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.register{
+    margin-right: 5px !important;
+    background-color: rgb(250, 213, 165) !important;
+    background-color: rgb(245, 237, 229) !important;
+    }
+    .LogIn{
+    margin-top: 10px !important;
+    
+    background-color: rgb(246, 246, 235) !important;
+    }
+    .form-warper{
+        overflow-y: auto;
+        max-height: 400px;
+        width: 100%;
+    }
+    .input-warper{
+margin: 10px;
+margin-bottom: 12px;
+margin-right: 15px;
+    }
+    .validate-message{
+color: red;
+font-size: 13px;
+    }
+
+    h2{
+        /* color: rgb(241, 234, 230); */
+        padding-bottom: 7px;
+        color: rgb(61, 54, 53);
+        border-bottom: 1.5px solid rgb(224, 153, 20);
+        text-align: center;
+       
+    }
+  
+   
+    .textField,.role,.textField_login{
+        width:220px
+    }
+
+    .iconClose-warper{
+        text-align: end;
+        width: 100%;
+        padding-top: 5px;
+    }
+    .Button{
+        color:white !important;
+        background-color: rgb(224, 153, 20) !important; 
+        width: 200px !important;
+        border-radius: 30px !important;
+        font-weight: 600 !important;
+        font-size: 16px;
+        margin-right: 10px;
+        margin-top: 20px;
+    }
+    .Button:hover{
+        background-color: rgb(79, 104, 12) !important;
+        transition: background-color 0.5s ;
+    }
+    .role{
+        width: 210px;
+       height: 30px;
+       font-weight:600;
+    }
+

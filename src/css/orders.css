@@ -1,0 +1,66 @@
+.main_warper{
+    display: flex;
+    justify-content: space-between;
+   
+   background-color:  rgb(245, 237, 229);
+}
+.page_orders_warper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+
+}
+.header_warper{
+    width: 100%;
+  
+    background-color: rgb(221, 235, 243);
+    
+}
+.newOrder-warper{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+
+    /* background-color: rgb(251, 248, 243); */
+}
+.bt-warper{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.agree{
+    background-color: rgb(216, 228, 251)!important;
+    margin:6px !important;
+    width: 100px;
+}
+
+.disagree{
+    background-color: rgb(248, 230, 230) !important;
+    margin:6px !important;
+}
+
+.bt-ready{
+    background-color: rgb(251, 235, 190)!important;
+}
+.order_number{
+  border: 1px solid rgb(240, 134, 4);
+  width:20px;
+  padding: 8px;
+  padding-right: 7px;
+  border-radius: 50%;
+}
+
+.time{
+    color: rgb(240, 134, 4);
+}
+@media only screen and (max-width: 700px) {
+    .main_warper{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-top: 70px;
+       
+    }
+}
