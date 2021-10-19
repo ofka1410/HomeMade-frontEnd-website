@@ -12,7 +12,7 @@ export default function Meals_manage({setLoader,token,tokenID}) {
     const[allItems,setAllItems]=useState([])
     const db = firebase.firestore(); 
     useEffect(()=>{
-        
+      
             setLoader(true)
             const get_dishes=async()=>{
                 try{

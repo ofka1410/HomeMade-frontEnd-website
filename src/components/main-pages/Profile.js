@@ -7,6 +7,40 @@ import Divider from '@material-ui/core/Divider';
 export default function Profile({cooker,email,setEmail,address,setAddress,
     phone_number,setPhone_number,setLoader,setStory,story,token,setRingtone,setCooker_working,cooker_working}) {
     const [index,setIndex]=useState(0)
+
+    useEffect(async() => {
+        console.log(cooker)
+if(Object.keys(cooker).length !==0){
+    try{
+        const res= await fetch(`${domain}/cookers-admin/${token}`)
+         const data = await res.json()
+           setEmail(data.cooker.Email)
+            setAddress(data.cooker.address)
+             setPhone_number(data.cooker.phone_number)
+             setCooker_working(data.cooker.working_hours)
+             console.log(data.cooker.working_hours)
+              setStory(data.story)
+             
+              if(data.cooker.ringtone){
+                setRingtone(data.cooker.ringtone)
+              }
+              else{
+                setRingtone("https://res.cloudinary.com/df2pklfox/video/upload/v1627976717/demoImage/fwuhfq2ihqfy869kawuk.ogg")
+              }
+              
+             
+         }
+             catch(err){
+             console.log(err)
+           }
+}
+else{
+    return;
+}
+    },[])
+     
+
+
 const update_cooker_info = async(e)=>{
     e.preventDefault()
     setLoader(true)
@@ -72,21 +106,25 @@ const update_cooker_info = async(e)=>{
                            <option value={5}>שישי</option>
                        </select>
                    </Grid>
-                   <Grid style={{display:'flex',justifyContent:'center',marginTop:'15px',marginBottom:'15px'}}>
-                       <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
-                       <label  className="label">:עד שעה</label>
-                       <input onChange={(e)=>{setCooker_working([...cooker_working,cooker_working[index].to=e.target.value])}}
-                        className='action-time'  value={cooker_working[index].to} type='time'/>
-                      
-                       </div>
-                   <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
-                   <label className="label"> :משעה</label>
-                   <input onChange={(e)=>{setCooker_working([...cooker_working,cooker_working[index].from=e.target.value])}} 
-                   className='action-time' value={cooker_working[index].from} type='time'/>
-
-                   </div>
+              
+                    {cooker_working.length? 
+                    <Grid style={{display:'flex',justifyContent:'center',marginTop:'15px',marginBottom:'15px'}}>
+                    <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
+                    <label  className="label">:עד שעה</label>
+                    <input onChange={(e)=>{setCooker_working([...cooker_working,cooker_working[index].to=e.target.value])}}
+                     className='action-time'  value={cooker_working[index].to} type='time'/>
                    
-                   </Grid>
+                    </div>
+                <div style={{display:'flex',flexDirection:'column',justifyContent:'center'}}>
+                <label className="label"> :משעה</label>
+                <input onChange={(e)=>{setCooker_working([...cooker_working,cooker_working[index].from=e.target.value])}} 
+                className='action-time' value={cooker_working[index].from} type='time'/>
+
+                </div>
+                
+                </Grid> :<div> Proccesing workin hours...</div>}
+                
+                  
                    </Grid>
                   
                 <Grid>
@@ -109,7 +147,7 @@ const update_cooker_info = async(e)=>{
                     </Grid>
                     <Grid>
                     <TextField
-                    onChange={(e)=>{setStory(e.target.value)}}
+                   
                      variant='outlined'
                       onChange={(e)=>{setPhone_number(e.target.value)}}
                        className='text_field'
@@ -118,7 +156,7 @@ const update_cooker_info = async(e)=>{
                         required/>
                     </Grid>
                     <Grid>
-                   <textarea  className='story_field' value={story}/>
+                   <textarea   onChange={(e)=>{setStory(e.target.value)}} className='story_field' value={story}/>
                     </Grid>
                     <Grid>
                    <Button type='submit' className='buttons' variant='outlined'>שמור שינויים</Button>

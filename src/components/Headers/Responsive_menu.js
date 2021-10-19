@@ -77,9 +77,14 @@ export default function Responsive_menu({setCurrentPage,setTokenID,setToken}) {
              activeClassName="navbar__link--active" 
              onClick={()=>setCurrentPage('זמינות מנה')} className='nav_link' to='/meals_manage'>זמינות מנה</NavLink>
                 </Grid>
-                <Grid className='logo_warper'>
+                <Grid style={{marginBottom:'60px'}} className='link_warper'>
+                <a style={{textDecoration:'none',color:'white',fontSize:'18px'}} href='https://forms.gle/h5fdDHMGw4b5dSzT8'
+                 className='link_warper'>הוסף מנה חדשה</a>
+                </Grid>
+                <Grid style={{zIndex:'-1000'}} className='logo_warper'>
                     <img style={{width:"100%"}} src='Homemade.png'/>
                 </Grid>
+               
       </List>
     </div>
   );

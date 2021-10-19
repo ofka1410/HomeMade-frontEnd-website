@@ -12,7 +12,7 @@ export default function Side_nav({setCurrentPage,setTokenID,setToken}) {
         <div className='side_nav_warper'>
              <Grid>
           <IconButton onClick={logout} style={{color:'white',width:'50px',height:'50px'}}>
-            <ExitToAppIcon style={{color:'white',width:'50px',height:'40px'}}/>
+            <ExitToAppIcon style={{color:'white',width:'40px',height:'30px'}}/>
             התנתק
             </IconButton> 
        </Grid> 
@@ -41,9 +41,13 @@ export default function Side_nav({setCurrentPage,setTokenID,setToken}) {
                  className='nav_link' to='/meals_manage'>זמינות מנה</NavLink>
                    
                 </Grid>
+                <Grid style={{zIndex:'1000'}} className='link_warper'>
+                <a style={{textDecoration:'none',color:'white',fontSize:'18px'}} href='https://forms.gle/h5fdDHMGw4b5dSzT8' className='link_warper'>הוסף מנה חדשה</a>
+                   
+                </Grid>
               
-                <Grid className='logo_warper'>
-                    <img style={{width:"100%"}} src='Homemade.png'/>
+                <Grid   className='logo_warper'>
+                    <img style={{width:"100%",height:'70%'}} src='Homemade.png'/>
                 </Grid>
         </div>
     )

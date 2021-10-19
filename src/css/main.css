@@ -42,3 +42,21 @@
     z-index: 1000;
     /* color: #e6531d; */
 }
+
+.support-float{
+    position: fixed;
+    z-index: 1000;
+    bottom:5%;
+    background-color: rgb(220, 231, 236);
+    opacity: 0.8;
+    border-radius: 50%;
+    padding: 10px;
+
+}
+
+.support-icon{
+    width:70px !important;
+    height: 70px !important;
+    color:rgb(36, 24, 4);
+
+}

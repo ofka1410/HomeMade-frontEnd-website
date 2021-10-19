@@ -61,7 +61,7 @@ const search_meal=(el)=>{
                   <option className='options' value={el.name}>{el.name}</option>
                     )
                 })
-             :<optin>סטטוס 404</optin>}
+             :<option>סטטוס 404</option>}
          </select>
          </Grid>
          <Grid>

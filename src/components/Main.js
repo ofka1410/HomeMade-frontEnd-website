@@ -14,14 +14,14 @@ import Responsive_nav from './Headers/Responsive_nav';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import firebase from '../connection/firebase'
-
+import Support from './Headers/Support'
 import '../css/main.css';
 import Bug_support from './support/Bug_support';
 
 import {
     BrowserRouter as Router,
     Switch,
-    Route} from "react-router-dom";
+    Route,HashRouter} from "react-router-dom";
     // import { collection, query, where, onSnapshot } from "firebase";
 
 export default function Main({setToken,token,setTokenID,tokenID}) {
@@ -103,6 +103,7 @@ export default function Main({setToken,token,setTokenID,tokenID}) {
                          setAddress(data.cooker.address)
                           setPhone_number(data.cooker.phone_number)
                           setCooker_working(data.cooker.working_hours)
+                          console.log(data.cooker.working_hours)
                            setStory(data.story)
                            setQuestion(data.question) 
                            if(data.cooker.ringtone){
@@ -172,7 +173,7 @@ export default function Main({setToken,token,setTokenID,tokenID}) {
 
     return (
         
-<Router>
+<HashRouter >
       <Grid>
        <Loading
        loader={loader}
@@ -202,7 +203,7 @@ setToken={setToken}
 newOrder={newOrder}
  />}
 <Grid className='page_warper'>
-
+<Support/>
     
 <Switch>
 
@@ -239,6 +240,7 @@ newOrder={newOrder}
       setRingtone={setRingtone}
       setCooker_working={setCooker_working}
       cooker_working={cooker_working}
+      
       />
      </Route>
 
@@ -303,7 +305,7 @@ newOrder={newOrder}
     :<div style={{display:'none'}}></div>}
      
     
-      </Router>
+      </HashRouter>
         
         
     )

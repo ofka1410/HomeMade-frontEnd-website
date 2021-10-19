@@ -13,7 +13,7 @@ export default function LoginForm({setToken,tokenID,setTokenID,token}) {
     const[loading,setLoading]=useState(false)
     const [password,setPassword]=useState('')
     useEffect(() => {
-    alert(' !הודעה חשובה אתר זה הוא דמו ולכן יתכנו באגים')
+    alert(' HomeMade ברוכים הבאים לאתר הטבחים של')
     },[])
 
   
